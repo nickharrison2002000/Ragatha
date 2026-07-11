@@ -1,0 +1,44 @@
+{
+  "name": "KnowledgeEntry",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the knowledge entry"
+    },
+    "content": {
+      "type": "string",
+      "description": "The knowledge text content"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "upload",
+        "url"
+      ],
+      "default": "manual",
+      "description": "How this knowledge was added"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for categorizing this knowledge"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived"
+      ],
+      "default": "active",
+      "description": "Active = retained (used in RAG), archived = lost (not used)"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}

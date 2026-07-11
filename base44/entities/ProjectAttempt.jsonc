@@ -1,0 +1,39 @@
+{
+  "name": "ProjectAttempt",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "description": "Reference to the parent project"
+    },
+    "attempt_number": {
+      "type": "number",
+      "description": "Sequential attempt number"
+    },
+    "strategy": {
+      "type": "string",
+      "description": "The approach tried in this attempt"
+    },
+    "action": {
+      "type": "string",
+      "description": "What was specifically done"
+    },
+    "result": {
+      "type": "string",
+      "description": "What happened when the action was taken"
+    },
+    "evaluation": {
+      "type": "string",
+      "description": "Whether it met the success criteria and why"
+    },
+    "succeeded": {
+      "type": "boolean",
+      "default": false,
+      "description": "Did this attempt achieve the goal"
+    }
+  },
+  "required": [
+    "project_id",
+    "attempt_number"
+  ]
+}

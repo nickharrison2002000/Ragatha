@@ -1,0 +1,17 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Conversation title (auto-generated from first message)"
+    },
+    "tier": {
+      "type": "string",
+      "description": "Model tier used for this conversation"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

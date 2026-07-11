@@ -1,0 +1,54 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Project title"
+    },
+    "goal": {
+      "type": "string",
+      "description": "What the project is trying to achieve"
+    },
+    "success_criteria": {
+      "type": "string",
+      "description": "How to know when the task is complete"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "paused"
+      ],
+      "default": "active",
+      "description": "Project lifecycle status"
+    },
+    "insanity_status": {
+      "type": "string",
+      "enum": [
+        "idle",
+        "running",
+        "stopped",
+        "succeeded",
+        "failed"
+      ],
+      "default": "idle",
+      "description": "Current insanity mode state"
+    },
+    "insanity_attempts": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of attempts made in insanity mode"
+    },
+    "max_attempts": {
+      "type": "number",
+      "default": 50,
+      "description": "Maximum attempts before giving up"
+    }
+  },
+  "required": [
+    "title",
+    "goal"
+  ]
+}
